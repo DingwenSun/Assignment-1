@@ -2,11 +2,6 @@
 @import url("https://use.typekit.net/qll5fse.css");
 
 
-img {
-  width:200px;
-  float:left;
-  clear:both;
-  }
 
 body {
   background: url("gun.png");
@@ -18,19 +13,20 @@ body {
 
 .title {
   text-align: center;
-  margin: 30px auto auto auto;
+  margin: 1em auto auto auto;
   color: #ff99cc;
   font-family: 'Nosifer', cursive;
-  font-size: 9em;
+  font-size: 14em;
   font-weight: 800;
   transform: scale(0.7,1);
   line-height: 1;
   text-transform: uppercase;
+  animation: blink 0.5s ease-in both;
 }
 
 .subtitle {
   text-align: center;
-  margin: 12px auto 24 auto;
+  margin: 2em;
   color: pink;
   font-family: 'Nosifer', cursive;
   font-size: 3em;
@@ -42,10 +38,10 @@ body {
 
 p {
   text-align: center;
-  margin: 24px,auto;
+  margin: 3em;
   color: pink;
   font-family: 'Finger Paint', cursive;
-  font-size: 1.5em;
+  font-size: 3em;
   font-weight: 100;
   transform: scale(0.8,1);
   line-height: 1;
@@ -53,58 +49,128 @@ p {
   }
 .highlight {
   display: inline-block;
+  margin: 1em auto auto auto;
   color: #ff99cc;
   position:inherit;
   font-family: 'Finger Paint', cursive;
-  font-size: 2em;
+  font-size: 8rem;
   font-weight: 100;
-  animation: bounce 0.2s ease-in both infinite;
-  animation-play-state: paused;
+  text-transform: capitalize;
+  animation: swing 2s linear infinite;
   }
 .highlight:hover {
   animation-play-state: running;
 }
+.ignored {
+  display: inline-block;
+  margin: 24px;
+  color: #ff99cc;
+  position:inherit;
+  font-family: 'Finger Paint', cursive;
+  font-size: 8rem;
+  font-weight: 100;
+  animation: enlarge 0.2s both;
+  animation-play-state: paused;
+}
+.ignored:hover {
+  animation-play-state: running;
+}
 
+.bored {
+  display: inline-block;
+  margin: 0.5em auto;
+  color: #ff99cc;
+  position:inherit;
+  font-family: 'Finger Paint', cursive;
+  font-size: 12rem;
+  font-weight: 100;
+  animation: bored 1s ease-in both;
+  animation-play-state: paused;
+}
+.bored:hover {
+  animation-play-state: running;
+}
+
+.jinx {
+  display: inline-block;
+  margin: 1em auto;
+  color: #ff99cc;
+  position:inherit;
+  font-family: 'Finger Paint', cursive;
+  font-size: 12rem;
+  font-weight: 100;
+  animation: bounce 0.2s ease-in both infinite;
+}
 footer {
     color: #ff99cc;
   }
 
 .powpow {
-  background-image: url(gun.png);
-  background-repeat:no-repeat;
-  background-size: 300px;
-  animation: swing 1s ease-out forwards;
+  width: 400px;
+  position:fixed;
+  top:0;
+  left:0;
 }
 
 @keyframes fade-slide-down {
   0% {
     opacity: 0;
-    transform: translateY(-12px);
+    transform: translateY(-12px) scale(0.8,1);
   }
   100% {
     opacity: 1;
-    transform: none;
+    transform: translateY(0px) scale(0.8,1);
   }
 }
 
+@keyframes enlarge{
+  0% {
+    color: pink;
+    transform: scale(0.5,0.5);
+  }
+  100% {
+    transform: scale(2,2) translateY(0.2em);
+  }
+}
+
+@keyframes bored{
+  0% {
+    color: pink;
+  }
+  100% {
+    color: grey;
+  }
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 @keyframes swing {
 	0% {
-	Transform: rotateX(0deg);
+	Transform: rotate(0deg);
 	}
 	20% {
-	Transform: rotateX(-45deg) rotateY(-45deg);
+	Transform: rotate(-30deg);
 	}
 	40% {
-	Transform: rotateX(45deg) rotateY(45deg);
+	Transform: rotate(30deg);
 	}
 	60% {
-	Transform: rotateX(-45deg) rotateY(-45deg);
+	Transform: rotate(-30deg);
 	}
 	80% {
-	Transform: rotateX(45deg) rotateY(45deg);
+	Transform: rotate(30deg);
 	}
 	100% {
-	Transform: rotateX(0deg);
+	Transform: rotate(0deg);
 	}
 }
 

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Caesar+Dressing|Finger+Paint|Homemade+Apple|Nosifer');
+@import url("https://use.typekit.net/qll5fse.css");
+
+
+img {
+  width:200px;
+  float:left;
+  clear:both;
+  }
+
+body {
+  background: url("gun.png");
+  background-repeat:no-repeat;
+  background-size: 300px;
+  background-attachment: scroll;
+  background-blend-mode: difference;
+}
+
+.title {
+  text-align: center;
+  margin: 30px auto auto auto;
+  color: #ff99cc;
+  font-family: 'Nosifer', cursive;
+  font-size: 9em;
+  font-weight: 800;
+  transform: scale(0.7,1);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 12px auto 24 auto;
+  color: pink;
+  font-family: 'Nosifer', cursive;
+  font-size: 3em;
+  font-weight: 800;
+  transform: scale(0.7,1);
+  line-height: 1;
+  position: relative;
+  }
+
+p {
+  text-align: center;
+  margin: 24px,auto;
+  color: pink;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.5em;
+  font-weight: 100;
+  transform: scale(0.8,1);
+  line-height: 1;
+  position: relative;
+  }
+.highlight {
+  display: inline-block;
+  color: #ff99cc;
+  position:inherit;
+  font-family: 'Finger Paint', cursive;
+  font-size: 2em;
+  font-weight: 100;
+  animation: bounce 0.2s ease-in both infinite;
+  animation-play-state: paused;
+  }
+.highlight:hover {
+  animation-play-state: running;
+}
+
+footer {
+    color: #ff99cc;
+  }
+
+.powpow {
+  background-image: url(gun.png);
+  background-repeat:no-repeat;
+  background-size: 300px;
+  animation: swing 1s ease-out forwards;
+}
+
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes swing {
+	0% {
+	Transform: rotateX(0deg);
+	}
+	20% {
+	Transform: rotateX(-45deg) rotateY(-45deg);
+	}
+	40% {
+	Transform: rotateX(45deg) rotateY(45deg);
+	}
+	60% {
+	Transform: rotateX(-45deg) rotateY(-45deg);
+	}
+	80% {
+	Transform: rotateX(45deg) rotateY(45deg);
+	}
+	100% {
+	Transform: rotateX(0deg);
+	}
+}
+
+@keyframes bounce {
+  0% {
+	transform: translateY(0px);
+	}
+  50% {
+    transform: translateY(-12px) scaleX(1.1);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+  /animation: fade-slide-down .5s ease-out forwards;*/

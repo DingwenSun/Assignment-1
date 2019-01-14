@@ -56,7 +56,8 @@ p {
   font-size: 8rem;
   font-weight: 100;
   text-transform: uppercase;
-  animation: swing 2s linear infinite;
+  animation: swing 1s linear 3;
+  animation-play-state: paused;
   }
 .highlight:hover {
   animation-play-state: running;
@@ -108,8 +109,36 @@ footer {
 .powpow {
   width: 400px;
   position:fixed;
-  top:0;
+  top:-1em;
   left:0;
+  animation: wiggle 3s linear infinite;
+}
+
+@keyframes wiggle {
+  0% {
+	Transform: rotate(0deg);
+  transform-origin: top center;
+	}
+	20% {
+	Transform: rotate(0deg);
+  transform-origin: top center;
+	}
+	40% {
+	Transform: rotate(0deg);
+  transform-origin: top center;
+	}
+	60% {
+	Transform: rotate(-5deg);
+  transform-origin: top center;
+	}
+	80% {
+	Transform: rotate(5deg);
+  transform-origin: top center;
+	}
+	100% {
+	Transform: rotate(0deg);
+  transform-origin: top center;
+	}
 }
 
 @keyframes fade-slide-down {
@@ -134,9 +163,6 @@ footer {
 }
 
 @keyframes bored{
-  0% {
-    color: pink;
-  }
   100% {
     color: grey;
   }
@@ -158,19 +184,19 @@ footer {
 	Transform: rotate(0deg);
 	}
 	20% {
-	Transform: rotate(-30deg);
+	Transform: rotate(72deg);
 	}
 	40% {
-	Transform: rotate(30deg);
+	Transform: rotate(144deg);
 	}
 	60% {
-	Transform: rotate(-30deg);
+	Transform: rotate(216deg);
 	}
 	80% {
-	Transform: rotate(30deg);
+	Transform: rotate(288deg);
 	}
 	100% {
-	Transform: rotate(0deg);
+	Transform: rotate(360deg);
 	}
 }
 
